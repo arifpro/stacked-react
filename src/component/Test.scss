@@ -1,0 +1,105 @@
+body {
+  background: linear-gradient(45deg, #453552, #252425);
+  // display: flex;
+  // align-items: center;
+  // justify-content: center;
+  height: 100vh;
+  margin-top: 15rem;
+  margin-left: 10rem;
+  font-family: Helvetica;
+}
+
+.cardsBox {
+  position: relative;
+  // transform: translateX(-105px);
+
+  .stacked__card {
+    // width: calc(18rem + 19vh);
+    width: calc(7rem + 19vh);
+    max-width: 80vw;
+    background: #f7fffd;
+    border-radius: 25px;
+    cursor: pointer;
+    box-shadow: 17px 0px 30px -10px rgba(0, 0, 0, 0.07) !important;
+
+    &.hide {
+      visibility: hidden;
+    }
+
+    &:not(.hide) {
+      position: absolute;
+      top: 0;
+      left: 0;
+      transition: all 0.8s cubic-bezier(0.18, 0.98, 0.45, 1);
+      box-shadow: 0 2px 10px 0 rgba(0, 0, 0, 0.07);
+
+      &[data-slide='0'] {
+        transform: translate(0px, 0px) scale(1);
+        z-index: 6;
+        opacity: 1;
+      }
+
+      &[data-slide='1'] {
+        // transform: translate(50px, 0) scale(0.9);
+        transform: translate(50%, 0) scale(0.82);
+        z-index: 5;
+        // opacity: 0.9;
+      }
+
+      &[data-slide='2'] {
+        // transform: translate(100px, 0) scale(0.8);
+        transform: translate(95%, 0) scale(0.62);
+        z-index: 4;
+        // opacity: 0.8;
+      }
+
+      // &[data-slide='3'] {
+      //   // transform: translate(150px, 0) scale(0.7);
+      //   transform: translate(140%, 0) scale(0.42);
+      //   z-index: 3;
+      //   // opacity: 0.7;
+      // }
+
+      // &[data-slide='4'] {
+      //   // transform: translate(200px, 0) scale(0.6);
+      //   transform: translate(165%, 0) scale(0.32);
+      //   z-index: 2;
+      //   // opacity: 0.6;
+      // }
+
+      // &[data-slide='5'] {
+      //   // transform: translate(250px, 0) scale(0.5);
+      //   transform: translate(185%, 0) scale(0.22);
+      //   z-index: 1;
+      //   // opacity: 0.5;
+      // }
+
+      &[data-slide='0'] {
+        transition: all 0.32s cubic-bezier(0.18, 0.98, 0.45, 1);
+      }
+    }
+
+    .stacked__cardImage {
+      width: 100%;
+      height: 260px;
+      object-fit: cover;
+      border-top-left-radius: 23px;
+      border-top-right-radius: 23px;
+      // z-index: 7;
+      box-shadow: 0 2px 10px 0 rgba(0, 0, 0, 0.07);
+    }
+
+    .contentPlaceholder {
+      padding: 14px 18px 20px;
+
+      .stacked__cardTitle {
+        color: #505050;
+      }
+      .stacked__cardRecommended {
+        color: tomato;
+        font-size: 12px;
+      }
+    }
+  }
+}
+
