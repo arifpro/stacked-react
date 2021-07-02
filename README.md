@@ -36,7 +36,7 @@ const data = [
 const App = () => {
     return (
         <div>
-            <StackedCardSlider data={data}/>
+            <StackedCardSlider data={data} slideTime={3000} />
         </div>
     );
 };
