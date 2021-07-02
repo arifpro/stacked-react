@@ -1,2 +1,1 @@
-# StackedCardSlider
-Created with CodeSandbox
+# stacked-react

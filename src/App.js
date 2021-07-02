@@ -1,10 +1,10 @@
-// import StackedCardSlider from "./component/StackedCardSlider";
-import StackedCardSlider from "./component/Test";
-
-export default function App() {
-  return (
-    <div>
-      <StackedCardSlider />
-    </div>
-  );
+import StackedCardSlider from './StackedCardSlider'
+const App = () => {
+    return (
+        <div>
+            <StackedCardSlider />
+        </div>
+    )
 }
+
+export default App
