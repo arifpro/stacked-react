@@ -1,8 +1,8 @@
 body {
   background: linear-gradient(45deg, #453552, #252425);
-  height: 100vh;
-  margin-top: 15rem;
-  margin-left: 10rem;
+  /* height: 100vh; */
+  /* margin-top: 15rem; */
+  /* margin-left: 10rem; */
   font-family: Helvetica;
 }
 .cardsBox {
@@ -27,7 +27,7 @@ body {
   box-shadow: 0 2px 10px 0 rgba(0, 0, 0, 0.07);
 }
 .cardsBox .stackedCard:not(.hide)[data-slide="0"] {
-  transform: translate(0px, 0px) scale(1);
+  transform: translate(0px, 0px) scale(1.02);
   z-index: 6;
   opacity: 1;
 }
@@ -55,6 +55,7 @@ body {
 }
 .cardsBox .stackedCard .contentPlaceholder .stackedCardTitle {
   color: #505050;
+  height: 70px;
 }
 .cardsBox .stackedCard .contentPlaceholder .stackedCardRecommended {
   color: tomato;
