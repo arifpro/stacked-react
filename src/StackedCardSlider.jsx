@@ -1,7 +1,7 @@
 import { useEffect } from "react";
 import "./StackedCardSlider.css";
 
-const StackedCardSlider = () => {
+const StackedCardSlider = ({ data, slideTime }) => {
   useEffect(() => {
     let sliderImagesBox = document.querySelectorAll(".cardsBox");
     sliderImagesBox.forEach((el) => {
@@ -26,26 +26,26 @@ const StackedCardSlider = () => {
       });
       setIndex(arrIndexes); // The first indexes addition
     });
+
+
+  }, []);
+
+  useEffect(() => {
+    setInterval(function() {
+      document.querySelector(".stackedCard").click();
+    }, slideTime || 3000);
   }, []);
 
   return (
     <main className="cardsBox owlCarousel">
       {/* <SingleCard hide /> */}
-      <SingleCard
-        img="https://pyimagesearch.com/wp-content/uploads/2019/01/python_ml_header.png"
-        title="Applied data science and Machine Leaning"
-        recommended
-      />
-      <SingleCard
-        img="https://webappsinfo.files.wordpress.com/2018/12/AndroidAppDev-Trends-min.jpg"
-        title="Android App Development"
-        recommended
-      />
-      <SingleCard
-        img="https://res.cloudinary.com/practicaldev/image/fetch/s--54ca_F2q--/c_imagga_scale,f_auto,fl_progressive,h_900,q_auto,w_1600/https://dev-to-uploads.s3.amazonaws.com/i/1wwdyw5de8avrdkgtz5n.png"
-        title="Learn ReactJs for FrontEnd"
-        recommended
-      />
+      {data?.map((item) => 
+        <SingleCard
+          img={item.img}
+          title={item.title}
+          recommended={item.recommended || false}
+        />
+      )}
     </main>
   );
 };
