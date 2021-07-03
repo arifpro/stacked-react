@@ -1,0 +1,24 @@
+{
+  "name": "stacked-react",
+  "version": "1.0.8",
+  "description": "Slacked React, a slider for react app",
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/arifpro/stacked-react.git"
+  },
+  "keywords": [
+    "react",
+    "slider",
+    "amarischool"
+  ],
+  "dependencies": {
+    "react": "17.0.2"
+  },
+  "author": "Md Arif Hossain | http://devarif.me",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/arifpro/stacked-react/issues"
+  },
+  "homepage": "https://github.com/arifpro/stacked-react#readme"
+}
